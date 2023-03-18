@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./menu_index.css">
+    <script src="https://kit.fontawesome.com/d223d51bd9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">About</a>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Our Team</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li>
+              <a href="#">Contact</a>
+              <ul>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Email</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+      </header>
+      
+
+
+      <script>
+        const toggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+    
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('menu-active');
+        });
+    </script>
+</body>
+</html>

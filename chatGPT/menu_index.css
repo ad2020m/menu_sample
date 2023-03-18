@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+header {
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu li a:hover {
+    color: #f44336;
+  }
+  
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f8f8;
+    z-index: 999;
+  }
+  
+  .menu ul li {
+    margin-right: 0;
+  }
+  
+  .menu ul li a {
+    color: #333;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  
+  .menu ul li a:hover {
+    color: #f44336;
+  }
+  
+  .menu li:hover > ul {
+    display: block;
+  }
+  
+  .toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .toggle i {
+    color: #333;
+    font-size: 24px;
+  }
+  @media (max-width: 991px) {
+    /* 画面幅が991px以下の場合に適用されるスタイル */
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #f8f8f8;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      height: calc(100vh - 80px);
+      overflow-y: scroll;
+    }
+  
+    .menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+      position: static;
+    }
+  
+    .menu li:last-child {
+      margin-bottom: 0;
+    }
+  
+    .menu li a {
+      font-size: 18px;
+    }
+  
+    .menu li a:not(:last-child)::after {
+      content: "\f107";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-left: 10px;
+    }
+  
+    .menu ul li a {
+      font-size: 16px;
+      padding-left: 30px;
+    }
+  
+    .menu ul ul li a {
+      font-size: 14px;
+      padding-left: 40px;
+    }
+  
+    .menu li:hover > ul {
+      display: block;
+      position: static;
+      background-color: #fff;
+      padding: 10px;
+    }
+  
+    .toggle {
+      display: block;
+    }
+    .menu-active.menu {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* 画面幅が767px以下の場合に適用されるスタイル */
+    .menu li a:not(:last-child)::after {
+      display: none;
+    }
+  
+    .menu ul li a {
+      font-size: 14px;
+      padding-left: 30px;
+    }
+  
+    .menu ul ul li a {
+      font-size: 14px;
+      padding-left: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* 画面幅が480px以下の場合に適用されるスタイル */
+    .menu li a {
+      font-size: 16px;
+    }
+  
+    .menu ul li a {
+      font-size: 14px;
+      padding-left: 20px;
+    }
+  
+    .menu ul ul li a {
+      font-size: 12px;
+      padding-left: 30px;
+    }
+  }
+  
