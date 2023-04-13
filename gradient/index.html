@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #eee;
+        }
+        .wrap {
+            overflow-x: hidden;
+        }
+
+
+        header, main, footer{
+            width: 100%;
+            position: relative;
+            padding: 150px 0;
+            margin: 100px 0;
+            overflow: hidden;
+        }
+        header {
+            z-index: 10;
+        }
+        .gradient1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image: repeating-linear-gradient(rgba(224, 110, 170, 1) 5px 40px,
+                    rgba(255, 255, 255, 1) 40px 45px,
+                    rgba(85, 85, 85, 1) 45px 60px,
+                    rgba(255, 255, 255, 1) 60px 65px);
+            transform-origin: center center;
+        }
+        .gradient2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 500px;
+            z-index: -1;
+            background-image: repeating-linear-gradient(rgba(0, 163, 175, 1) 5px 40px,
+                    rgba(255, 255, 255, 1) 40px 45px,
+                    rgba(85, 85, 85, 1) 45px 60px,
+                    rgba(255, 255, 255, 1) 60px 65px);
+            transform: rotate(-10deg) scaleX(1.5) translateY(-30%);
+            transform-origin: center bottom;
+        }
+        .gradient3 {
+            position: absolute;
+            top: -25%;
+            left: 0;
+            right: 0;
+            bottom: -25%;
+            z-index: -1;
+            background-image: repeating-linear-gradient(rgba(224, 110, 170, 1) 5px 40px,
+                    rgba(255, 255, 255, 1) 40px 45px,
+                    rgba(85, 85, 85, 1) 45px 60px,
+                    rgba(255, 255, 255, 1) 60px 65px);
+            transform: rotate(-10deg) scaleX(1.5);
+            transform-origin: center center;
+        }
+        .text_area {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 800px;
+            color: #222;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header>
+            <div class="gradient1"></div>
+            <div class="text_area">
+                <h1>gradient sample</h1>
+                <p>『夜長姫と耳男』は、坂口安吾の短編小説。作品執筆の背景には、随筆「飛騨・高山の抹殺―安吾の新日本地理・中部の巻―」などに描かれた、安吾の古代史とこの地方への興味・関心がある。また批評・研究においては、しばしば安吾の芸術観、……
+                </p>
+                <img src="https://placehold.jp/360x240.png" alt="">
+                <p>samplesample</p>
+                <img src="https://placehold.jp/360x240.png" alt="">
+                <p>samplesample</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="gradient2"></div>
+            <div class="text_area">
+                <h1>gradient sample</h1>
+                <p>『夜長姫と耳男』は、坂口安吾の短編小説。作品執筆の背景には、随筆「飛騨・高山の抹殺―安吾の新日本地理・中部の巻―」などに描かれた、安吾の古代史とこの地方への興味・関心がある。また批評・研究においては、しばしば安吾の芸術観、……
+                </p>
+                <img src="https://placehold.jp/360x240.png" alt="">
+                <p>samplesample</p>
+                <img src="https://placehold.jp/360x240.png" alt="">
+                <p>samplesample</p>
+            </div>
+        </main>
+
+        <footer>
+
+            <div class="gradient3"></div>
+            <div class="text_area">
+                <h1>gradient sample</h1>
+                <p>『夜長姫と耳男』は、坂口安吾の短編小説。作品執筆の背景には、随筆「飛騨・高山の抹殺―安吾の新日本地理・中部の巻―」などに描かれた、安吾の古代史とこの地方への興味・関心がある。また批評・研究においては、しばしば安吾の芸術観、……
+                </p>
+                <img src="https://placehold.jp/360x240.png" alt="">
+                <p>samplesample</p>
+                <img src="https://placehold.jp/360x240.png" alt="">
+                <p>samplesample</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
