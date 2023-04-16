@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+        .container {
+            position: relative;
+            width: clamp(300px, 50%, 800px);
+            height: 1500px;
+            margin: 0 auto;
+        }
+        p {
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .img01 {
+            top: 20%;
+            left: 20%;
+        }
+        .img02 {
+            top: 20%;
+            right: 20%;
+        }
+        .img03 {
+            top: 50%;
+            left: 50%;
+        }
+        .img04 {
+            bottom: 10%;
+            left: 20%;
+        }
+        .img05 {
+            bottom: 20%;
+            right: 20%;
+        }
+        h1 {
+            height: 300px;
+            background-color: #f0f;
+        }
+        .on {
+            opacity: 1 !important;
+            transform: translate(0) !important;
+        }
+        .off {
+            opacity: 0;
+            transform: translateX(100vw);
+            transition: all 1s;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <p class="img01"><img src="https://placehold.jp/3d4070/ffffff/150x150.png?css=%7B%22border-radius%22%3A%2275px%22%7D" alt=""></p>
+        <p class="img02"><img src="https://placehold.jp/3dff70/ffffff/15x15.png?css=%7B%22border-radius%22%3A%227.5px%22%7D" alt=""></p>
+        <p class="img03 off"><img src="https://placehold.jp/3d40ff/ffffff/100x100.png?css=%7B%22border-radius%22%3A%2250px%22%7D" alt=""></p>
+        <p class="img04 off"><img src="https://placehold.jp/ff4070/ffffff/50x50.png?css=%7B%22border-radius%22%3A%2225px%22%7D" alt=""></p>
+        <p class="img05"><img src="https://placehold.jp/3ff0ff/ffffff/20x20.png?css=%7B%22border-radius%22%3A%2215px%22%7D" alt=""></p>
+    </div>
+
+    <h1 id="id01" class="off">1234567</h1>
+    
+    <script>
+        const classOff = document.querySelectorAll('.off');
+
+        document.addEventListener('scroll', () => {
+
+            classOff.forEach(element => {
+                let scrollY = window.scrollY + window.innerHeight;
+                let scrollItemPosition = element.getBoundingClientRect().top + window.scrollY;
+
+                if(scrollY > scrollItemPosition) {
+                    element.classList.add('on');
+                } else {
+                    element.classList.remove('on');
+                }
+            });
+        })
+    </script>
+</body>
+</html>
